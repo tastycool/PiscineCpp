@@ -6,13 +6,13 @@
 #    By: tberube- <tberube-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/09 09:09:34 by tberube-          #+#    #+#              #
-#    Updated: 2023/03/09 09:09:36 by tberube-         ###   ########.fr        #
+#    Updated: 2023/04/27 10:16:10 by tberube-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			= megaphone
+NAME			= phonebook
 
-SOURCE			= megaphone.cpp
+SOURCE			= main.cpp Contact.cpp PhoneBook.cpp
 
 OBJECT			=	$(SOURCE:.cpp=.o)
 
@@ -26,6 +26,8 @@ WHITE 			= 	\033[38;5;15m
 GREY 			= 	\033[38;5;8m
 ORANGE 			= 	\033[38;5;202m
 RED 			= 	\033[38;5;160m
+CYAN 			= 	\033[0;36m
+MAGENTA 		=	\033[0;35m
 
 all: $(NAME)
 
