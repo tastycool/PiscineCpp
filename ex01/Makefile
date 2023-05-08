@@ -6,13 +6,15 @@
 #    By: tberube- <tberube-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/09 09:09:34 by tberube-          #+#    #+#              #
-#    Updated: 2023/04/27 10:16:10 by tberube-         ###   ########.fr        #
+#    Updated: 2023/05/08 14:11:25 by tberube-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			= phonebook
 
 SOURCE			= main.cpp Contact.cpp PhoneBook.cpp
+
+#HEADERS			= 	Phonebook.hpp Contact.hpp
 
 OBJECT			=	$(SOURCE:.cpp=.o)
 
@@ -31,7 +33,7 @@ MAGENTA 		=	\033[0;35m
 
 all: $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp #$(HEADERS)
 	@echo "$(GREY)Compiling...				$(WHITE)$<"
 	@$(COMPILE) $(FLAGS) -c $< -o $@
 
