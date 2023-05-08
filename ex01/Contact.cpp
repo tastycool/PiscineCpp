@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:07:42 by tberube-          #+#    #+#             */
-/*   Updated: 2023/05/08 11:08:41 by tberube-         ###   ########.fr       */
+/*   Updated: 2023/05/08 14:52:26 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,15 @@ std::string Contact::getLastName(void) const
 std::string Contact::getNickName(void) const
 {
     return (this->nickName);
+}
+
+std::string Contact::getPhoneNumber(void) const
+{
+    return (this->phoneNumber);
+}
+
+std::string Contact::getDarkestSecret(void) const
+{
+    return (this->darkestSecret);
 }
 

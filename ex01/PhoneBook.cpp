@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:07:27 by tberube-          #+#    #+#             */
-/*   Updated: 2023/05/08 13:58:55 by tberube-         ###   ########.fr       */
+/*   Updated: 2023/05/08 14:59:46 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,16 +195,24 @@ void PhoneBook::printSearch()
     if (std::cin.eof())
         exit(1);
     num = atoi(str.c_str());
-    if (str.length() == 1 &&isdigit(str[0]) && num <= 7 && num >= 0)
+    if (str.length() == 1 && isdigit(str[0]) && num <= 7 && num >= 0)
     {  
-        for (int i = 0; i <= num; i++)
-        {
-            maxLenName = verifierNameLen(this->_contact[i].getName());
-            maxLenLastName = verifierLastNameLen(this->_contact[i].getLastName());
-            maxLenNickName = verifierNickNameLen(this->_contact[i].getNickName());
-        }
-        std::cout << num << "|" << maxLenName << "|" << maxLenLastName << "|" << maxLenNickName << "|" << std::endl;
-        std::cout << "\033[38;5;46mClick enter to continue\033[0m";
+        std::cout << std::endl;
+        std::cout << "vous avez écrit " << num << std::endl;
+        std::cout << "First Name = " << _contact[num].getName() << std::endl;
+        std::cout << "Last Name = " << _contact[num].getLastName() << std::endl;
+        std::cout << "Nickname = " << _contact[num].getNickName() << std::endl;
+        std::cout << "Phone Number = " << _contact[num].getPhoneNumber() << std::endl;
+        std::cout << "Darkest Secret = " << _contact[num].getDarkestSecret() << std::endl;
+        std::cout << std::endl;
+        // for (int i = 0; i <= num; i++)
+        // {
+        //     maxLenName = verifierNameLen(this->_contact[i].getName());
+        //     maxLenLastName = verifierLastNameLen(this->_contact[i].getLastName());
+        //     maxLenNickName = verifierNickNameLen(this->_contact[i].getNickName());
+        // }
+        //std::cout << num << "|" << maxLenName << "|" << maxLenLastName << "|" << maxLenNickName << "|" << std::endl;
+        std::cout << "\033[38;5;46mClick enter to continue\033[0m" << std::endl;
         getline(std::cin, str);
         if (std::cin.eof())
             exit(1);
